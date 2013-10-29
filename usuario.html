@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios de la Batcueva</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="estilo.css" rel="stylesheet" >
+    <script src="funciones.js"></script>
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <img width="200" alt="Logo" src="img/logos/batman.jpg">
+            <h1>Batcueva</h1>
+            <p>Intentando cambiar el mundo</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+                {{#usuario}}
+                    <p> <img width=200 alt="Imagen del usuario" src="img/perfiles/{{login}}.jpg"> </p>
+                    <p> {{nombre}} {{apellidos}} </p>
+                {{/usuario}}
+            </div>
+
+            <div class="col-lg-5">
+                <p id="imagen-peticion"> <img width="200" alt="Peticion" src="img/logos/spidermanVSbatman.jpeg"> </p>
+                <h2> Acciones recientes </h2>
+                <h3> Creo la petición: Vencer a Spiderman </h3>
+                <p> 07/01/2010 </p>
+            </div>
+        </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Industries Wayne Inc.</p>
+    </footer>
+    </div> <!-- /container -->
+</body>
+</html>
