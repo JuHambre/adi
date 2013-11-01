@@ -23,10 +23,14 @@
 
     <div id="overRegistro" class="overbox">
         <form id="formRegistro">
-            <p>Email</p> <input type="text">
-            <p>Contraseña</p> <input type="password">
-            <p>Repite contraseña</p> <input type="password">
-            <input type="submit" value="Registro" onclick="hideLightboxRegistro()">
+            <p>Email</p> <input id="loginRegistro" name="login" type="text" onchange="comprobarRegistro()">
+            <span id="loginCorrecto" style="display:none;" class="alert alert-success">Login permitido</span>
+            <span id="loginCogido" style="display:none;" class="alert alert-danger"> Login ya en uso</span>
+            <p>Contraseña</p> <input id="contraseñaRegistro" name="password" type="password">
+            <p>Repite contraseña</p> <input id="rContraseñaRegistro" type="password">
+            <p>Nombre</p> <input id="nombreRegistro" name="nombre" type="text">
+            <p>Apellidos</p> <input id="apellidosRegistro" name="apellidos" type="text">
+            <input type="submit" value="Registro" onclick="hideLightboxRegistro();peticionAJAX2();return false;">
         </form>
     </div>
     <div id="fadeRegistro" class="fadebox">&nbsp;</div>
