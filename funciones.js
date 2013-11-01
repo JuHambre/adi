@@ -26,24 +26,92 @@ function hideLightboxRegistro() {
     document.getElementById('fadeRegistro').style.display='none';
 }
 
-function peticionAJAX(){
-    var login=document.getElementById("login");
-    var contraseñalogin=document.getElementById("contraseñalogin");
-    var req = new XMLHttpRequest();
-    req.open('POST','login', true);
-    req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    req.onreadystatechange = mi_callback(req);
-
-    var loginseparado=login.value.split("@");
-    req.send('login='+loginseparado[0]+'%40'+loginseparado[1]+'&password='+contraseñalogin.value);
+function notNull(){
+    if($('#login').val()!='' && $('#contraseñalogin').val()!=''){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
-function mi_callback(req) {
-    return function(){
-        if(req.readyState == 4){
-            if(req.status == 200){
-                alert(req.responseText);
-            }
-        }
+function alerta(texto, tipo){
+
+    var mensaje = $('#mensaje');
+
+    mensaje.html(texto);
+    mensaje.removeClass();
+    mensaje.addClass("alert");
+    mensaje.addClass("alert-" + tipo);
+    mensaje.show();
+    mensaje.fadeOut(3000);
+}
+
+function mostrarUsuario(nombre){
+
+    var botonRegistro =$('#botonRegistro');
+    var botonLogin =$('#botonLogin');
+    var nombreUsuario = $('#nombreUsuario');
+    var botonLogout =$('#botonLogout');
+
+    botonRegistro.hide();
+    botonLogin.hide();
+    nombreUsuario.html(nombre);
+    botonLogout.show();
+}
+
+function datosUsuario(login){
+    $.ajax({
+        url: 'api/usuarios/'+login,
+        method: 'GET'
+    })
+        .done(function(data, textStatus, jqXHR) {
+            mostrarUsuario(data.nombre+" "+data.apellidos);
+        })
+}
+
+function logout(){
+    localStorage.removeItem("login");
+    $.get("logout");
+
+}
+
+function peticionAJAX(){
+
+    var login=$('#login').val();
+    var contraseñalogin=$("#contraseñalogin");
+
+    if(notNull()){
+        var formLogin=$('#formLogin');
+
+        $.ajax( {
+            url:'login',
+            method: 'POST',
+            data: formLogin.serialize()
+        })
+            .done(function(data, textStatus, jqXHR) {
+                alerta("Bienvenido a la Batcueva", "success");
+                localStorage.login = login;
+                datosUsuario(login);
+            })
+            .fail(function(jqXHR, textStatus, errorThrown){
+                 jqXHR.statusCode(
+                     {
+                         400: function() {
+                             alerta("Los parametros no son validos", "danger");
+                         },
+                         403: function() {
+                             alerta("Los credenciales no son correctos", "danger");
+                         }
+                     }
+                 );
+            });
     }
+    else{
+        alerta("Alguno de los campos esta vacio", "info");
+    }
+}
+
+if (localStorage.login) {
+    datosUsuario(localStorage.login);
 }

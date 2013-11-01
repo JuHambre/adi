@@ -4,10 +4,10 @@
     <list default="true" id="aa5a530c-7f02-496f-8b62-aa1a396fff95" name="Default" comment="" />
     <ignored path="muevete.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383046374458" ignored="false" />
+    <file path="/index.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383324992912" ignored="false" />
     <file path="/peticion.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1382378264170" ignored="false" />
-    <file path="/funciones.js" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383045745365" ignored="false" />
-    <file path="/estilo.css" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1382366907265" ignored="false" />
+    <file path="/funciones.js" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383328277724" ignored="false" />
+    <file path="/estilo.css" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383324628932" ignored="false" />
     <file path="/usuario.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1382376373280" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,11 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="muevete" />
@@ -31,8 +36,10 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="65" selection-start="577" selection-end="577" vertical-scroll-proportion="-4.375">
-              <folding />
+            <state line="31" column="60" selection-start="367" selection-end="1158" vertical-scroll-proportion="-2.5416667">
+              <folding>
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,7 +47,34 @@
       <file leaf-file-name="funciones.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/funciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="4" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.54347825">
+            <state line="92" column="48" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.24114671">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="peticion.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peticion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="46" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-10.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuario.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usuario.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="46" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-16.208334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilo.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/estilo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="19" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -57,18 +91,17 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/estilo.css" />
-        <option value="$PROJECT_DIR$/usuario.html" />
-        <option value="$PROJECT_DIR$/peticion.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/peticion.html" />
+        <option value="$PROJECT_DIR$/usuario.html" />
         <option value="$PROJECT_DIR$/funciones.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="386" />
-    <option name="y" value="83" />
-    <option name="width" value="874" />
-    <option name="height" value="613" />
+    <option name="x" value="-1" />
+    <option name="width" value="1368" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -96,6 +129,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,7 +150,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,14 +233,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="386" y="83" width="874" height="613" extended-state="0" />
+    <frame x="-1" y="0" width="1368" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5178317" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13636364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -286,7 +319,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -303,7 +338,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="54" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -330,7 +367,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -346,29 +385,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usuario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="30" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.8949212" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peticion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="46" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.5913978" />
+        <state line="36" column="19" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="65" selection-start="577" selection-end="577" vertical-scroll-proportion="-4.375">
+        <state line="31" column="60" selection-start="367" selection-end="1158" vertical-scroll-proportion="-2.5416667">
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peticion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="46" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="46" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-16.208334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/funciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.54347825">
+        <state line="92" column="48" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.24114671">
           <folding />
         </state>
       </provider>
