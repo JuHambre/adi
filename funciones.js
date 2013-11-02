@@ -64,12 +64,14 @@ function mostrarUsuario(nombre){
     var nombreUsuario = $('#nombreUsuario');
     var botonLogout =$('#botonLogout');
     var botonPeticion =$('#botonPeticion');
+    var datosPersonales =$('#datosPersonales');
 
     botonRegistro.hide();
     botonLogin.hide();
     nombreUsuario.html(nombre);
     botonPeticion.show();
     botonLogout.show();
+    datosPersonales.hide();
 }
 
 function datosUsuario(login){
@@ -227,6 +229,41 @@ function crearPeticion(){
                     },
                     403: function() {
                         alerta("No estamos autentificados", "danger");
+                    },
+                    500: function() {
+                        alerta("Error del servidor (Industries Wayne esta en ello)", "danger");
+                    }
+                }
+            )
+        });
+}
+
+function crearFirma(){
+
+    var json={
+        publica:    $('#publicaFirma').prop('checked'),
+        comentario: $('#comentarioFirma').val()
+    }
+    if(!localStorage.login){
+        json.nombre = $('#nombreFirma').val();
+        json.apellidos = $('#apellidosFirma').val();
+        json.email = $('#emailFirma').val();
+    }
+    var jsonstgf = JSON.stringify(json);
+    $.ajax({
+        url:'api/peticiones/'+id_peticion+'/firmas/',
+        method: 'POST',
+        contentType: 'application/json',
+        data: jsonstgf
+    })
+        .done(function(data, textStatus, jqXHR) {
+            alerta("Firma creada correctamente", "success");
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            jqXHR.statusCode(
+                {
+                    400: function() {
+                        alerta("Faltan campos o no son validos", "danger");
                     },
                     500: function() {
                         alerta("Error del servidor (Industries Wayne esta en ello)", "danger");
