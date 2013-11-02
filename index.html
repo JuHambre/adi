@@ -27,7 +27,7 @@
         <span id="loginCorrecto" style="display:none;" class="alert alert-success">Login permitido</span>
         <span id="loginCogido" style="display:none;" class="alert alert-danger"> Login ya en uso</span>
         <p>Contraseña</p> <input id="contraseñaRegistro" name="password" type="password">
-        <p>Repite contraseña</p> <input id="rContraseñaRegistro" type="password">
+        <p>Repite contraseña</p> <input id="rContraseñaRepáginagistro" type="password">
         <p>Nombre</p> <input id="nombreRegistro" name="nombre" type="text">
         <p>Apellidos</p> <input id="apellidosRegistro" name="apellidos" type="text">
         <input type="submit" value="Registro" onclick="hideLightboxRegistro();peticionAJAX2();return false;">
@@ -35,8 +35,20 @@
     </div>
     <div id="fadeRegistro" class="fadebox">&nbsp;</div>
 
+    <div id="overPeticion" class="overbox">
+        <form id="formPeticion">
+            <p>Titulo</p> <input id="tituloPeticion" name="titulo" type="text">
+            <p>Fecha fin</p> <input id="fechaPeticion" name="fin" type="date">
+            <p>Firmas numero objetivo</p> <input id="firmasPeticion" name="firmasObjetivo" type="text">
+            <p>Texto</p> <textarea id="textoPeticion" name="texto"></textarea>
+            <input type="submit" value="Entrar" onclick="hideLightboxPeticion();crearPeticion();return false;">
+        </form>
+    </div>
+    <div id="fadePeticion" class="fadebox">&nbsp;</div>
+
     <a href="javascript:showLightboxLogin();">Hacer Login</a>
     <a href="javascript:showLightboxRegistro();">Registrarse</a>
+    <a href="javascript:showLightboxPeticion();">Crear Peticion</a>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -51,6 +63,7 @@
             <div class="navbar-collapse collapse">
                 <form class="navbar-form navbar-right">
                     <span id="mensaje"></span>
+                    <button id="botonPeticion" type="submit" class="btn btn-success" onclick="showLightboxPeticion();return false" style="display:none;">Crear Peticion</button>
                     <button id="botonLogout" type="submit" class="btn btn-success" onclick="logout()" style="display:none;">Logout</button>
                     <button id="botonLogin" type="submit" class="btn btn-success" onclick="hideLightboxRegistro();showLightboxLogin();return false">Login</button>
                     <button id="botonRegistro" type="submit" class="btn btn-success" onclick="hideLightboxLogin();showLightboxRegistro();return false">Registro</button>

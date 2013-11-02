@@ -16,6 +16,11 @@ function showLightboxRegistro() {
     document.getElementById('fadeRegistro').style.display='block';
 }
 
+function showLightboxPeticion() {
+    document.getElementById('overPeticion').style.display='block';
+    document.getElementById('fadePeticion').style.display='block';
+}
+
 function hideLightboxLogin() {
     document.getElementById('overLogin').style.display='none';
     document.getElementById('fadeLogin').style.display='none';
@@ -24,6 +29,11 @@ function hideLightboxLogin() {
 function hideLightboxRegistro() {
     document.getElementById('overRegistro').style.display='none';
     document.getElementById('fadeRegistro').style.display='none';
+}
+
+function hideLightboxPeticion() {
+    document.getElementById('overPeticion').style.display='none';
+    document.getElementById('fadePeticion').style.display='none';
 }
 
 function notNull(){
@@ -53,10 +63,12 @@ function mostrarUsuario(nombre){
     var botonLogin =$('#botonLogin');
     var nombreUsuario = $('#nombreUsuario');
     var botonLogout =$('#botonLogout');
+    var botonPeticion =$('#botonPeticion');
 
     botonRegistro.hide();
     botonLogin.hide();
     nombreUsuario.html(nombre);
+    botonPeticion.show();
     botonLogout.show();
 }
 
@@ -178,7 +190,7 @@ function peticionAJAX2(){
                             }
                         }
                     )
-                })
+                });
         }
         else{
             alerta("Las contraseñas no coinciden", "info");
@@ -187,6 +199,41 @@ function peticionAJAX2(){
     else{
         alerta("Alguno de los campos esta vacio", "info");
     }
+}
+
+function crearPeticion(){
+
+    var json={
+        titulo:             $('#tituloPeticion').val(),
+        fin:                $('#fechaPeticion').val(),
+        firmasObjetivo:     $('#firmasPeticion').val(),
+        texto:              $('#textoPeticion').val()
+    }
+    var jsonstgf = JSON.stringify(json);
+    $.ajax({
+        url:'api/peticiones',
+        method: 'POST',
+        contentType: 'application/json',
+        data: jsonstgf
+    })
+        .done(function(data, textStatus, jqXHR) {
+            alerta("Creada peticion correctamente", "success");
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            jqXHR.statusCode(
+                {
+                    400: function() {
+                        alerta("Faltan campos o no son validos", "danger");
+                    },
+                    403: function() {
+                        alerta("No estamos autentificados", "danger");
+                    },
+                    500: function() {
+                        alerta("Error del servidor (Industries Wayne esta en ello)", "danger");
+                    }
+                }
+            )
+        });
 }
 
 if (localStorage.login) {
