@@ -9,6 +9,8 @@
     <file path="/funciones.js" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383412385578" ignored="false" />
     <file path="/estilo.css" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383324628932" ignored="false" />
     <file path="/usuario.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1382376373280" ignored="false" />
+    <file path="/PruebaSpec.js" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383414437542" ignored="false" />
+    <file path="/SpecRunner.html" changelist="aa5a530c-7f02-496f-8b62-aa1a396fff95" time="1383413931735" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="3161" selection-end="3337" vertical-scroll-proportion="-14.375">
+            <state line="7" column="4" selection-start="157" selection-end="240" vertical-scroll-proportion="-4.375">
               <folding>
                 <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -68,10 +70,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="funciones.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="funciones.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="22" selection-start="7626" selection-end="7626" vertical-scroll-proportion="0.5862069">
+            <state line="97" column="15" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PruebaSpec.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jasmine/spec/PruebaSpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="4" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2782462">
+              <folding>
+                <element signature="e#0#153#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpecRunner.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmine/SpecRunner.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="61" selection-start="1829" selection-end="1829" vertical-scroll-proportion="-19.333334">
+              <folding>
+                <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerSpec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmine/spec/PlayerSpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="29" selection-start="61" selection-end="84" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,6 +126,9 @@
         <option value="$PROJECT_DIR$/usuario.html" />
         <option value="$PROJECT_DIR$/peticion.html" />
         <option value="$PROJECT_DIR$/funciones.js" />
+        <option value="$PROJECT_DIR$/jasmine/spec/Prueba.js" />
+        <option value="$PROJECT_DIR$/jasmine/SpecRunner.html" />
+        <option value="$PROJECT_DIR$/jasmine/spec/PruebaSpec.js" />
       </list>
     </option>
   </component>
@@ -263,13 +300,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="748" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13863637" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13863637" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -347,25 +384,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usuario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="46" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peticion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="54" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -419,15 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="3161" selection-end="3337" vertical-scroll-proportion="-14.375">
-          <folding>
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usuario.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="45" selection-start="4001" selection-end="4001" vertical-scroll-proportion="-34.958332">
@@ -450,8 +459,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/funciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="22" selection-start="7626" selection-end="7626" vertical-scroll-proportion="0.5862069">
+        <state line="97" column="15" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="157" selection-end="240" vertical-scroll-proportion="-4.375">
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmine/spec/PlayerSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="61" selection-end="84" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmine/SpecRunner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="61" selection-start="1829" selection-end="1829" vertical-scroll-proportion="-19.333334">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmine/spec/PruebaSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="4" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2782462">
+          <folding>
+            <element signature="e#0#153#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
