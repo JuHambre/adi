@@ -6,36 +6,43 @@
  * To change this template use File | Settings | File Templates.
  */
 
+//Mostrar Lightbox del login
 function showLightboxLogin() {
     document.getElementById('overLogin').style.display='block';
     document.getElementById('fadeLogin').style.display='block';
 }
 
+//Mostrar Lightbox del registro
 function showLightboxRegistro() {
     document.getElementById('overRegistro').style.display='block';
     document.getElementById('fadeRegistro').style.display='block';
 }
 
+//Mostrar Lightbox de crear una nueva peticion
 function showLightboxPeticion() {
     document.getElementById('overPeticion').style.display='block';
     document.getElementById('fadePeticion').style.display='block';
 }
 
+//Ocultar Lightbox del login
 function hideLightboxLogin() {
     document.getElementById('overLogin').style.display='none';
     document.getElementById('fadeLogin').style.display='none';
 }
 
+//Ocultar Lightbox del registro
 function hideLightboxRegistro() {
     document.getElementById('overRegistro').style.display='none';
     document.getElementById('fadeRegistro').style.display='none';
 }
 
+//Ocultar Lightbox de crear una nueva peticion
 function hideLightboxPeticion() {
     document.getElementById('overPeticion').style.display='none';
     document.getElementById('fadePeticion').style.display='none';
 }
 
+//Comprueba si los campos del login no son vacios
 function notNull(){
     if($('#login').val()!='' && $('#contraseñalogin').val()!=''){
         return true;
@@ -45,6 +52,8 @@ function notNull(){
     }
 }
 
+//Funcion que hemos creado para mostrar nuestras propias alertas
+//Tendremos que pasarle el mensaje que queremos y ademas la clase de boostrap que queremos aplicar
 function alerta(texto, tipo){
 
     var mensaje = $('#mensaje');
@@ -57,6 +66,8 @@ function alerta(texto, tipo){
     mensaje.fadeOut(3000);
 }
 
+//Funcion que activamos cuando el usuario se loguee para mostrarle su nombre, boton logout, crear nueva peticion y ocultar los demas botones
+//Le pasamos el nombre para mostrarlo
 function mostrarUsuario(nombre){
 
     var botonRegistro =$('#botonRegistro');
@@ -74,6 +85,7 @@ function mostrarUsuario(nombre){
     datosPersonales.hide();
 }
 
+//Funcion que llama a mostrarUsuario con el localStorage en caso de que haya
 function datosUsuario(login){
     $.ajax({
         url: 'api/usuarios/'+login,
@@ -84,12 +96,14 @@ function datosUsuario(login){
         })
 }
 
+//Funcion para hacer logout
 function logout(){
     localStorage.removeItem("login");
     $.get("logout");
 
 }
 
+//Peticion AJAX para que el usuario se loguee (En JQuery)
 function peticionAJAX(){
 
     var login=$('#login').val();
@@ -126,6 +140,7 @@ function peticionAJAX(){
     }
 }
 
+//Comprobar que los campos del registro no sean nulos
 function notNull2(){
     if($('#loginRegistro').val()!='' && $('#contraseñaRegistro').val()!='' && $('#rContraseñaRegistro').val()!=''&& $('#nombreRegistro').val()!='' && $('#apellidosRegistro').val()!=''){
         return true;
@@ -135,6 +150,7 @@ function notNull2(){
     }
 }
 
+//Funcion para comprobar que las contraseñas son iguales
 function contraseñaIgual(){
     if($('#contraseñaRegistro').val()==$('#rContraseñaRegistro').val()){
         return true;
@@ -144,6 +160,7 @@ function contraseñaIgual(){
     }
 }
 
+//Funcion para comprobar si el usuario esta registrado o no
 function comprobarRegistro(){
 
     var login= $('#loginRegistro').val();
@@ -164,6 +181,7 @@ function comprobarRegistro(){
         })
 }
 
+//Peticion AJAX para que el usuario se registre (En JQuery) convirtiendo la cadena a JSON
 function peticionAJAX2(){
 
     if(notNull2()){
@@ -203,6 +221,7 @@ function peticionAJAX2(){
     }
 }
 
+//Peticion para crear la peticion (En JQuery) convirtiendo la cadena en JSON
 function crearPeticion(){
 
     var json={
@@ -238,6 +257,7 @@ function crearPeticion(){
         });
 }
 
+//Peticion para crear una firma (En JQuery) convirtiendo la cadena en JSON
 function crearFirma(){
 
     var json={
@@ -273,6 +293,7 @@ function crearFirma(){
         });
 }
 
+//Siempre comprobamos si hay usuario logueado en caso de que si llamamos a datosUsuario
 if (localStorage.login) {
     datosUsuario(localStorage.login);
 }

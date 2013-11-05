@@ -1,22 +1,39 @@
-CSS
+MOSTRAR MENSAJES CON ANIMACIÓN
 
-Para esta práctica se ha utilizado Bootstrap, más concretamente hemos utilizado
-la plantilla jumbotron, para ello simplemente vamos al siguiente enlace:
+En nuestro caso hemos creado un método en JavaScipt (Alerta()) para poder llamarlo desde donde
+queramos mostrandonos el mensaje con animacion. En nuestro caso aparecera en la barra de arriba y
+desaparecera al cabo de unos segundos. Además dependiendo de si sale error, es correcto, o
+simplemente es una nota informativa; saldra de un color o de otro.
 
-http://getbootstrap.com/examples/jumbotron/
+JASMINE
 
-Para que Bootstrap funcione tendremos que bajarnos la carpeta y añadirla a
-nuestro proyecto. Además también deberemos añadir un enlace al script de
-jquery de Google para ejecutar Bootstrap.
+Se han implementado dos pruebas sencillas de Jasmine para comprobar su funcionamiento, podemos
+verlas en el archivo PruebaSpec.js dentro de la carpeta jasmine. Simplemente hemos querido
+comprobar si la funcion notNull() (Nos permite saber si el loguin o password son nulos)
+funcionaba correctamente para ello implementamos lo siguiente:
 
-Una vez aquí simplemente con cualquier navegador vemos el código fuente y luego
-simplemente tendremos que sustituir la página de ejemplo por nuestro texto.
+describe ("login",function(){
 
-DISTINTOS NAVEGADORES
+    var login;
+    var contraseñalogin;
 
-Para ver las capturas de pantalla, de como han quedado en los distintos
-navegadores, simplemente en la carpeta captura encontraremos los distintos
-volcados de pantalla.
+    //Este metodo se aplicara antes de cada funcion
+    beforeEach(function() {
+        login = $('#login');
+        contraseñalogin = $('#contraseñalogin');
+    });
 
-Como podemos observar no encontramos ninguna diferencia en ninguno
-de los navegadores.
+    //Funcion que comprueba si los campos estan vacios
+    it("No te deja si los campos estan vacios",function(){
+        login.val('');
+        contraseñalogin.val('');
+        expect(notNull()).toBe(false); //Misma funcion que assertEquals() de JUnit
+    });
+
+    //Funcion que comprueba si los cambos estan llenos
+    it("Si te deja si los campos estan rellenados",function(){
+        login.val('pepe@ua.es');
+        contraseñalogin.val('pepe');
+        expect(notNull()).toBe(true);
+    });
+});
